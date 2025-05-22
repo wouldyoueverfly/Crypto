@@ -18,12 +18,16 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                swiftfulThinking
-                coinGeckoSection
-                developerSection
-                applicationSection
-            }
+                List {
+                    swiftfulThinking
+
+                    coinGeckoSection
+
+                    developerSection
+
+                    applicationSection
+
+                }
             .tint(Color.blue)
             .navigationTitle("Settings")
             .toolbar {

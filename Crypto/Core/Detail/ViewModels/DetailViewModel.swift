@@ -59,11 +59,11 @@ class DetailViewModel: ObservableObject {
         
         let price = coinModel.currentPrice.asCurrencyWith6Decimals()
         let pricePercentChange = coinModel.priceChangePercentage24H
-        let priceStat = StatisticModel(title: "Current Price", value: price, persentageChange: pricePercentChange)
+        let priceStat = StatisticModel(title: "Current Price", value: price, percentageChange: pricePercentChange)
         
         let marketCap = "$" + (coinModel.marketCap?.formattedWithAbbreviations() ?? "")
         let marketCapPercentChange = coinModel.marketCapChangePercentage24H
-        let marketCapStat = StatisticModel(title: "Market Cap", value: marketCap, persentageChange: marketCapPercentChange)
+        let marketCapStat = StatisticModel(title: "Market Cap", value: marketCap, percentageChange: marketCapPercentChange)
         
         let rank = "\(coinModel.rank)"
         let rankStat = StatisticModel(title: "Rank", value: rank)
@@ -89,11 +89,11 @@ class DetailViewModel: ObservableObject {
         
         let priceChange = coinModel.priceChange24H?.asCurrencyWith6Decimals() ?? "n/a"
         let pricePercentChange = coinModel.priceChangePercentage24H
-        let priceChangeStat = StatisticModel(title: "24h Price Change", value: priceChange, persentageChange: pricePercentChange)
+        let priceChangeStat = StatisticModel(title: "24h Price Change", value: priceChange, percentageChange: pricePercentChange)
         
         let marketCapChange = "$" + (coinModel.marketCapChange24H?.formattedWithAbbreviations() ?? "")
         let marketCapPercentChange = coinModel.marketCapChangePercentage24H
-        let marketCapChangeStat = StatisticModel(title: "24h Market Cap Change", value: marketCapChange, persentageChange: marketCapPercentChange)
+        let marketCapChangeStat = StatisticModel(title: "24h Market Cap Change", value: marketCapChange, percentageChange: marketCapPercentChange)
         
         let blockTime = coinDetailModel?.blockTimeInMinutes ?? 0
         let blockTimeString = blockTime == 0 ? "n/a" : "\(blockTime)"

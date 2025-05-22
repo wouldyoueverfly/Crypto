@@ -23,13 +23,13 @@ struct StatisticView: View {
                 Image(systemName: "triangle.fill")
                     .font(.caption2)
                     .rotationEffect(
-                        Angle(degrees:stat.persentageChange ?? 0 >= 0 ? 0 : 180))
-                Text(stat.persentageChange?.asPercentString() ?? "")
+                        Angle(degrees:stat.percentageChange ?? 0 >= 0 ? 0 : 180))
+                Text(stat.percentageChange?.asPercentString() ?? "")
                     .font(.caption)
                     .bold()
             }
-            .foregroundStyle(stat.persentageChange ?? 0 >= 0 ? Color.theme.green : Color.theme.red)
-            .opacity(stat.persentageChange == nil ? 0 : 1)
+            .foregroundStyle(stat.percentageChange ?? 0 >= 0 ? Color.theme.green : Color.theme.red)
+            .opacity(stat.percentageChange == nil ? 0 : 1)
         }
     }
 }

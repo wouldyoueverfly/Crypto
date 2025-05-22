@@ -129,7 +129,7 @@ class HomeViewModel: ObservableObject {
             return stats
         }
         
-        let marketCap = StatisticModel(title: "Market Cap", value: data.marketCap, persentageChange: data.marketCapChangePercentage24hUsd)
+        let marketCap = StatisticModel(title: "Market Cap", value: data.marketCap, percentageChange: data.marketCapChangePercentage24hUsd)
         let volume = StatisticModel(title: "24h Volume", value: data.volume)
         let btcDominance = StatisticModel(title: "BTC Dominance", value: data.btcDominance)
         
@@ -147,12 +147,12 @@ class HomeViewModel: ObservableObject {
                 return previousValue
             }
             .reduce(0, +)
-        let persentageChange = ((portfolioValue - previousValue) / previousValue) * 100
+        let percentageChange = ((portfolioValue - previousValue) / previousValue) * 100
         
         let portfolio = StatisticModel(
             title: "Portfolio Value",
             value: portfolioValue.asCurrencyWith2Decimals(),
-            persentageChange: persentageChange)
+            percentageChange: percentageChange)
         
         stats.append(contentsOf: [marketCap, volume, btcDominance, portfolio])
         
