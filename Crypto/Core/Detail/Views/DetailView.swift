@@ -113,7 +113,7 @@ extension DetailView {
                             showFullDescription.toggle()
                         }
                     }
-                    .accentColor(Color.blue)
+                    .tint(Color.blue)
                     .font(.caption)
                     .fontWeight(.bold)
                     .padding(.vertical, 4)
@@ -158,8 +158,9 @@ extension DetailView {
                 Link("Reddit", destination: url)
             }
         }
-        .accentColor(Color.blue)
-        .font(.caption)
+        .tint(Color.blue)
+        .font(.callout)
+        .fontWeight(.medium)
         .bold()
         .frame(maxWidth: .infinity, alignment: .leading)
     }
